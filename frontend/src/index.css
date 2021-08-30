@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    font-size: 62.5%;
+    @apply box-border;
+}
+body {
+    @apply m-0 h-screen text-2xl font-sans antialiased;
+}
+#root {
+    @apply h-full;
+}
+h1 {
+    @apply py-4 text-3xl;
+}
+h2 {
+    @apply py-4 text-2xl;
+}
+
+a {
+    @apply no-underline;
+}
+a:hover {
+    @apply text-[#ff8000];
+}
