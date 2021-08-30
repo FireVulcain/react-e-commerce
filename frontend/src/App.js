@@ -5,7 +5,7 @@ import { ProductView } from "./views/ProductView";
 function App() {
     return (
         <BrowserRouter>
-            <div className="flex flex-col h-full">
+            <div className="flex flex-col h-full justify-between">
                 <header className="bg-[#203040] flex flex-wrap justify-between items-center">
                     <div>
                         <Link className="text-white p-4 text-5xl font-bold inline-block" to="/">
@@ -21,7 +21,7 @@ function App() {
                         </Link>
                     </div>
                 </header>
-                <main className="p-4">
+                <main className="p-4 h-full">
                     <Route path="/" component={HomeView} exact></Route>
                     <Route path="/product/:id" component={ProductView}></Route>
                 </main>

@@ -9,11 +9,13 @@ export const ProductView = (props) => {
     if (!product) return <Redirect to="/" />;
 
     return (
-        <div>
-            <Link to="/">Back to result</Link>
+        <div className="max-w-screen-2xl m-auto">
+            <Link class="inline-block mb-24" to="/">
+                Back to result
+            </Link>
             <div className="flex flex-wrap justify-between items-start">
                 <div className="flex-grow-[2] flex-shrink-[1] w-[50rem]">
-                    <img className="w-full" src={product.image} alt={product.name} />
+                    <img src={product.image} alt={product.name} />
                 </div>
                 <div className="flex-grow-[1] flex-shrink-[1] w-[25rem]">
                     <ul>
