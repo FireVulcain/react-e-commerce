@@ -1,3 +1,4 @@
+import { Product } from "./components/Product";
 import data from "./data";
 
 function App() {
@@ -22,34 +23,7 @@ function App() {
                 <div>
                     <div className="flex flex-wrap items-center justify-center">
                         {data.products.map((product) => (
-                            <div key={product._id} className="border-[0.1rem] border-gray-100 border-solid bg-[#f8f8f8] rounded-lg m-4">
-                                <a href={`/product/${product._id}`}>
-                                    <img className="rounded-lg max-w-md w-full" src={product.image} alt={product.name} />
-                                </a>
-                                <div className="p-4">
-                                    <a className="mb-2" href={`/product/${product._id}`}>
-                                        <h2 className="mb-2">{product.name}</h2>
-                                    </a>
-                                    <div className="mb-2">
-                                        <span className="text-[#f0c040] mb-2 m-0.5">
-                                            <i className="fa fa-star mb-2"></i>
-                                        </span>
-                                        <span className="text-[#f0c040] mb-2 m-0.5">
-                                            <i className="fa fa-star mb-2"></i>
-                                        </span>
-                                        <span className="text-[#f0c040] mb-2 m-0.5">
-                                            <i className="fa fa-star mb-2"></i>
-                                        </span>
-                                        <span className="text-[#f0c040] mb-2 m-0.5">
-                                            <i className="fa fa-star mb-2"></i>
-                                        </span>
-                                        <span className="text-[#f0c040] mb-2 m-0.5">
-                                            <i className="fa fa-star mb-2"></i>
-                                        </span>
-                                    </div>
-                                    <div className="text-[2rem] mb-2">${product.price}</div>
-                                </div>
-                            </div>
+                            <Product key={product._id} product={product} />
                         ))}
                     </div>
                 </div>
